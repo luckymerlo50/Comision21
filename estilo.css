@@ -1,0 +1,357 @@
+@font-face {
+    font-family: lato;
+    src: url(./Fonts/Lato/Lato-Light.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: lato, sans-serif;
+}
+
+.header {
+    display: flex;
+    background-color: #40a0da;
+    background:linear-gradient(to left, white, #40a0da 40% 1%);
+    justify-content: space-between;
+    align-items: end;
+    padding: 48px 40px 16px;
+}
+
+.logo {
+    max-width: 20rem;
+    background-color: #40a0da;
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav a {
+    color: rgb(76, 77, 78);
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: black;
+}
+
+.manif {
+    width: 100%;
+    height: auto;
+    background-color: black;
+}
+
+.nuestros_trabajos {
+    font-family: lato, sans-serif;
+    font-size: 20px;
+    color: rgb(15, 3, 3);
+    background-color: white;
+    text-align: center;
+    padding: 30px;
+}
+
+.imagenes {
+    width: 100%;
+    display: grid;
+    background-color: white;
+    text-align: center;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 180px);
+    grid-template-areas:
+        "img1 img9 img4 img3"
+        "img6 img9 img8 img3"
+        "img6 img7 img10 img2"
+        "img5 img7 img10 img2";
+    grid-gap: 15px;
+}
+
+.grid-items {
+    background-size: cover;
+    border-radius: 20px;
+}
+
+.items1 {
+    background-image: url(./img/156987EE-8654-49C3-9428-D22D6D96DA01.JPEG);
+    grid-area: img1;
+}
+
+.items2 {
+    background-image: url(./img/DE6050FE-05C8-4BBE-8F68-69CCCCA6F2C4.JPEG);
+    grid-area: img2;
+    background-position: center;
+}
+
+.items3 {
+    background-image: url(./img/EFEB6153-DFF5-4874-9DCA-CB96E7C9E0A2.JPEG);
+    grid-area: img3;
+}
+
+.items4 {
+    background-image: url(./img/IMG_0006.jpeg);
+    grid-area: img4;
+}
+
+.items5 {
+    background-image: url(./img/IMG_0409.jpeg);
+    grid-area: img5;
+}
+
+.items6 {
+    background-image: url(./img/IMG_1190.jpeg);
+    grid-area: img6;
+}
+
+.items7 {
+    background-image: url(./img/IMG_1357.jpeg);
+    grid-area: img7;
+}
+
+.items8 {
+    background-image: url(./img/IMG_1358.jpeg);
+    grid-area: img8;
+}
+
+.items9 {
+    background-image: url(./img/D4A44495-6129-4B4B-B41D-684EAC25AB01.jpg);
+    grid-area: img9;
+}
+
+.items10 {
+    background-image: url(./img/5f427717-ee0a-48b0-ba17-4b3518ed0d12.jpg);
+    grid-area: img10;
+}
+
+footer {
+    height: 150px;
+    width: 100%;
+    background-color: darkgray;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.pfooter {
+    font-family: lato, sans-serif;
+    font-size: 20px;
+}
+
+.redes {
+    font-size: 30px;
+    text-decoration: none;
+    letter-spacing: 20px;
+    padding-top: 50px;
+}
+
+.redeslink {
+    color: black
+}
+
+.redeslink:hover {
+    color: white;
+    transition-duration: 1s;
+}
+
+.navbar {
+    display: none;
+}
+
+@media only screen and (max-width:514px) {
+
+    .nav {
+        display: none;
+    }
+
+    .header {
+        width: 100%;
+        padding: 40px 20px 16px;
+        display: inline-block;
+        background:#40a0da;
+    }
+
+    .logo {
+        min-width: 300px;
+    }
+
+    .navbar {
+        display: flex;
+        padding: 0;
+    }
+    .container-fluid {
+        background-color: #40a0da;
+        justify-content: flex-end;
+    }
+
+    .navbar>.container-fluid {
+        justify-content: flex-end;
+    }
+
+    .offcanvas-header {
+        background-color: #40a0da;
+    }
+
+    .navbar-nav .nav-link{
+        font-size: 18px;
+    }
+
+    .imagenes {
+        
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat (5, 180px);
+        grid-template-areas:
+            "img1 img2"
+            "img3 img4"
+            "img5 img6"
+            "img7 img8"
+            "img9 img10";
+    }
+}
+
+@media only screen and (min-width:515px) and (max-width:950px) {
+    .header {
+        display: inline-block;
+        width: 100%;
+        padding: 1rem 40px 0;
+    }
+
+    .logo {
+        padding-bottom: 1rem;
+    }
+
+    .nav {
+        display: flex;
+        justify-content: end;
+    }
+
+    .nav-list {
+        font-size: 18px;
+        gap: 1rem;
+        padding-left: 0;
+    }
+
+    .imagenes {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: repeat(4, 180px);
+        grid-template-areas:
+            "img1 img2 img3"
+            "img4 img2 img6"
+            "img4 img5 img8"
+            "img7 img9 img10";
+    }
+}
+
+@media only screen and (min-width:951px) and (max-width:1300px) {
+    .header {
+        display: inline-block;
+        width: 100%;
+        padding: 1rem 40px 0;
+    }
+
+    .logo {
+        padding-bottom: 1rem;
+    }
+
+    .nav {
+        display: flex;
+        justify-content: end;
+    }
+
+    .nav-list {
+        font-size: 18px;
+        gap: 2rem;
+        padding-left: 0;
+    }
+}
+
+.div-conteiner-aa, .div-heladeras {
+    background-color: black;
+    padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: space-around;
+}
+.img-heladeras{
+    width: 300px;
+    height: autod;
+}
+
+
+
+.mainnos {
+    width: 100%;
+    display: flex;
+    color: black;
+}
+.divnos{
+    width: 100%;
+    background-image: url(./img/TECNICO-ESPECIALISTA-EN-REFRIGERACION-1.jpg);
+    background-size: cover;
+}
+
+.h1nos {
+    padding-top: 1rem;
+    letter-spacing: 2px;
+    margin-left: 9rem;
+}
+
+.pnos {
+    height: auto;
+    width: 40%;
+    min-width: 400px;
+    font-size: 18px;
+    padding-left: 1rem;
+    padding-bottom: 1rem;
+}
+
+
+
+.conteiner-contacto {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+
+}
+
+.secc {
+
+    display: flex;
+}
+
+.formu {
+    padding: 20px;
+    font-family: Geneva, Tahoma, sans-serif;
+    color: dodgerblue;
+    text-transform: uppercase;
+    height: auto;
+    width: 500%;
+}
+
+input {
+    height: 35px;
+    width: 75%;
+    border: solid 1px dodgerblue;
+    letter-spacing: 2px;
+    border-radius: 20px;
+}
+
+textarea {
+    height: 80px;
+    width: 75%;
+    border: solid 1px dodgerblue;
+    border-radius: 5px;
+}
+
+.div_heladeras {
+    display: flex;
+    background-color: black;
+}
+
+.img_heladeras {
+    height: auto;
+    width: 33%;
+    padding: 20px;
+}
